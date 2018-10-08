@@ -1,0 +1,129 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700');
+@import url('https://fonts.googleapis.com/css?family=Bellefair');
+@import url('https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield');
+/*
+400 - regular
+600 - semi bold
+700 - bold
+*/
+
+//own font-icons
+@font-face {
+    font-family: 'own-font-icons';
+    src: url('../fonts/own-font-icons.woff?9jswv1') format('woff');
+}
+
+html {
+    font-size: 15px;
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+    height: 100%;
+}
+
+//main colors
+@white: #ffffff;
+@black: #000000;
+@blue: #376ba5;
+
+//main fonts
+@crimson: {
+    font-family: "Crimson Text", Arial, sans-serif;
+}
+
+;
+
+@abhaya: {
+    font-family: "Abhaya Libre", Arial, sans-serif;
+}
+
+;
+
+@bellefair: {
+    font-family: 'Bellefair', serif;
+}
+
+;
+
+@delafield: {
+    font-family: 'Mrs Saint Delafield', cursive;
+}
+
+;
+
+//fonts
+h1 {
+    @crimson();
+    color: @blue;
+    font-size: 1.93rem; //29px
+    font-weight: 400;
+    line-height: 2.0rem;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    @crimson();
+    color: @black;
+    font-size: 1.47rem; //22px
+    font-weight: 400;
+    line-height: 1.47rem;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    @abhaya();
+    color: @black;
+    font-size: 1.0rem; //15px
+    font-weight: 400;
+    letter-spacing: 0.06rem;
+    line-height: 2.20rem;
+    padding: 0;
+    margin: 1.67rem 0 0 0;
+}
+
+// Responsive
+//
+// max width 1199
+@media only screen and (max-width: 1199px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+// max width 991
+@media only screen and (max-width: 991px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+// max width 767
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+// max width 991
+@media only screen and (max-width: 991px) {
+    h1 {
+        font-size: 1.77rem; //23px
+    }
+}
+
+// max width 437
+@media only screen and (max-width: 437px) {
+    h1 {
+        font-size: 1.42rem; //17px
+    }
+    h2 {
+        font-size: 1.42rem; //17px
+    }
+}

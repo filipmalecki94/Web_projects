@@ -1,0 +1,84 @@
+.menu-container {
+    width: 275px;
+    height: 100%;
+    background-color: fade(@black, 80%);
+    text-align: center;
+    padding: 0 18px;
+    .top {
+        background-color: @white;
+        padding: 30px 0;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    nav {
+        ul {
+            text-align: left;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li {
+                border-top: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                padding: 10px 0 10px 42px;
+                margin: 0;
+                a {
+                    @crimson();
+                    color: @white;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 15px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                &:hover {
+                    border-top-color: fade(@white, 50%);
+                    border-bottom-color: fade(@white, 50%);
+                }
+                .dropdown-window {
+                    background-color: @white;
+                    margin: 5px 0 0 -42px;
+                    .dropdown-list {
+                        padding: 10px 12px;
+                        .dropdown-list-element {
+                            pointer-events: auto;
+                            border: none;
+                            padding: 4.5px 0;
+                            margin: 0;
+                            a {
+                                @abhaya();
+                                font-size: 15px;
+                                font-weight: 400;
+                                line-height: 15px;
+                                color: @black;
+                                text-transform: none;
+                                letter-spacing: 0.14px;
+                                &:hover {
+                                    font-weight: 700;
+                                    letter-spacing: unset;
+                                }
+                            }
+                            a.active {
+                                font-weight: 700;
+                                letter-spacing: unset;
+                                pointer-events: none;
+                            }
+                        }
+                    }
+                }
+            }
+            li.active {
+                padding-top: 11px;
+                padding-bottom: 11px;
+                margin-top: -1px;
+                margin-bottom: -1px;
+                border-top-color: fade(@white, 50%);
+                border-bottom-color: fade(@white, 50%);
+                pointer-events: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+#contents-background {
+    height: ~"calc(100% - 245px)";
+    .flexslider {
+        height: 100%;
+        border: none;
+        margin: 0;
+        .slides {
+            height: 100%;
+            li {
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            .pic-1 {
+                background-image: url(../images/background/banner_01.jpg);
+            }
+            .pic-2 {
+                background-image: url(../images/background/banner_02.jpg);
+            }
+            .pic-3 {
+                background-image: url(../images/background/banner_03.jpg);
+            }
+        }
+    }
+}
+
+//Responsive
+//
+// max width 767
+@media only screen and (max-width: 767px) {
+    #contents-background {
+        height: ~"calc(100% - 140px)";
+    }
+}

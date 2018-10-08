@@ -1,0 +1,31 @@
+#banner {
+    height: ~"calc(100% - 245px)";
+    .flexslider {
+        height: 100%;
+        border: none;
+        margin: 0;
+        .slides {
+            height: 100%;
+            li {
+                height: 100%;
+                .banner {
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-position: bottom center;
+                }
+                .pic-01 {
+                    background-image: url(../images/header/Banner_01.jpg);
+                }
+                .pic-02 {
+                    background-image: url(../images/header/Banner_02.jpg);
+                }
+                .pic-03 {
+                    background-image: url(../images/header/Banner_03.jpg);
+                }
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

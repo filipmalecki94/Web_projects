@@ -1,0 +1,60 @@
+footer {
+    #bottom {
+        height: 105px;
+        .address {
+            padding: 0 0 0 50px;
+            address {
+                @abhaya();
+                color: @black;
+                font-size: 1.20rem;
+                font-weight: 400;
+                line-height: 105px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+//Responsive
+//
+// max width 991
+@media only screen and (max-width: 991px) {
+    footer {
+        #bottom {
+            .address {
+                address {
+                    font-size: 1.23rem;
+                }
+            }
+        }
+    }
+}
+
+// max width 767
+@media only screen and (max-width: 767px) {
+    footer {
+        #bottom {
+            height: 70px;
+            .address {
+                address {
+                    line-height: 70px;
+                }
+            }
+        }
+    }
+}
+
+// max width 437
+@media only screen and (max-width: 437px) {
+    footer {
+        #bottom {
+            .address {
+                padding: 0 30px;
+                address {
+                    font-size: 0.94rem;
+                }
+            }
+        }
+    }
+}
