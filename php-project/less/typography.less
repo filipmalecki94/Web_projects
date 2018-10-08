@@ -1,0 +1,80 @@
+//font
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+@lato: {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+;
+
+//collors
+@white: #ffffff;
+@blue: #3c93d0;
+@dark-blue: #507091;
+@grey: #cccccc;
+@gray-blue: #5f6c7c;
+@light-grey: #f4f7f9;
+@dark-grey: #798696;
+@light-grey-blue: #afc1d1;
+@red: #c1272d;
+@green: #20754a;
+@menu-active: #a2b4c5;
+
+body {
+    min-width: 1200px;
+    @lato();
+}
+
+.container {
+    min-width: 1170px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: @gray-blue;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    color: @gray-blue;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: @gray-blue;
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: @gray-blue;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: @blue;
+    padding: 0;
+    margin: 0;
+    &:hover {
+        color: @blue;
+    }
+}

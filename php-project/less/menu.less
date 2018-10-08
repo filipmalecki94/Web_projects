@@ -1,0 +1,80 @@
+.side-menu {
+    padding-right: 4px;
+    .menu {
+        background-color: @dark-blue;
+        border-radius: 4px;
+        ul {
+            text-align: left;
+            list-style-type: none;
+            padding: 25px 0 25px 0;
+            margin: 0;
+            li {
+                border-top: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                padding: 14px 0 14px 68px;
+                margin: -1px 0 -1px 0;
+                a {
+                    @lato();
+                    color: @white;
+                    font-size: 16px;
+                    line-height: 18px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                img {
+                    padding-right: 10px;
+                }
+                &:hover {
+                    border-top-color: @menu-active;
+                    border-bottom-color: @menu-active;
+                }
+            }
+            .active {
+                background-color: @menu-active;
+                pointer-events: none;
+                a {
+                    font-weight: 700;
+                }
+                .drop {
+                    pointer-events: auto;
+                    padding: 0;
+                    .drop-in {
+                        padding: 10px 0;
+                        line-height: 23px;
+                        a {
+                            font-weight: 400;
+                            &:hover {
+                                color: fade(@white, 50%);
+                            }
+                        }
+                    }
+                    .drop-in.active {
+                        &::before {
+                            content: '»';
+                            font-size: 20px;
+                            line-height: 20px;
+                            color: @white;
+                            padding-right: 5px;
+                        }
+                        a {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            .special {
+                pointer-events: auto;
+                a {
+                    &:hover {
+                        color: fade(@white, 50%);
+                    }
+                }
+            }
+            /*.switched-off {
+                display: none;
+            }*/
+        }
+    }
+}
