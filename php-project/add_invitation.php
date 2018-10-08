@@ -53,7 +53,7 @@ else{
             '.$row['name'].' hat Sie zu einem Dock B Netzwerktreffen eingeladen.
 
             Nutzen Sie bitte den folgenden Link, um Ihre Teilnahme am Treffen zu bestaetigen:
-            https://dockb-hamburg.com/backend/WORKING/Filip/email_confirmation.php?idi=$maxID&code=$confirm_code
+            https://link/email_confirmation.php?idi=$maxID&code=$confirm_code
 
             Termin: '.$_POST['meeting'].'
 
@@ -68,7 +68,7 @@ else{
 
             Nutzen Sie bitte den folgenden Link, um Ihre Teilnahme am Treffen zu bestaetigen:
 
-            https://dockb-hamburg.com/backend/WORKING/Filip/email_confirmation.php?idi=$maxID&code=$confirm_code
+            https://link/email_confirmation.php?idi=$maxID&code=$confirm_code
 
             Termin: ".$_POST['meeting']."
 
@@ -77,7 +77,7 @@ else{
             Bitte bringen Sie bitte ca. 40 Visitenkarten mit.";
         }
 
-        mail($_POST['email'],"Einladung zum Dock B Netzwerktreffen",$message,"From: ".$row['email']);
+        mail($_POST['email'],"Einladung zum Netzwerktreffen",$message,"From: ".$row['email']);
 
         $repeat = false;
 
