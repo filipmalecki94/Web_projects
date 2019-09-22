@@ -22,10 +22,7 @@ $last_login = "0000-00-00";
 
 $sql = "INSERT INTO users (idu, username, password, email, status, level, since, last_login) VALUES ($idu , '$username' , '$password' , '$email' , $status , $level , '$since' , '$last_login')";
 
-if (mysqli_query($conn, $sql)) {
-    //echo "Update successful";
-}
-else {
+if (!mysqli_query($conn, $sql)) {
   	echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
@@ -43,17 +40,13 @@ $web = $_POST['homepage'];
 $summary = $_POST['summary'];
 $description = $_POST['description'];
 
-$lastname = substr(strrchr($name, ' '), -1);
+list($firstName,$lastName) = explode(' ',$name);
 
 
-$sql = "INSERT INTO profiles (uid, name, $lastname firm, function, street, number, postalcode, city, telephone, mobile, email, web, summary, description) VALUES 
-		($idu , '$name' , '$lastname' '$firm' , '$function' , '$street' , '$number' , '$postalcode', '$city' , '$telephone' , '$mobile' , '$email' , '$web' , '$summary' , '$description')";
+$sql = "INSERT INTO profiles (uid, name, firstname, lastname, firm, function, street, number, postalcode, city, telephone, mobile, email, web, summary, description) VALUES 
+		($idu , '$name' , '$firstName', '$lastName', '$firm' , '$function' , '$street' , '$number' , '$postalcode', '$city' , '$telephone' , '$mobile' , '$email' , '$web' , '$summary' , '$description')";
 
-if (mysqli_query($conn, $sql)) {
-	echo $sql;
-    //echo "Update successful";
-} 
-else {
+if (!mysqli_query($conn, $sql)) {
 	echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
