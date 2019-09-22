@@ -26,10 +26,8 @@ else{
 	$sql = "UPDATE users SET username = '$username' , password = '$password' , email = '$email' , level = $level WHERE idu = $idu";
 }
 
-if (mysqli_query($conn, $sql)) {
-    //echo "Update successful";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+if (!mysqli_query($conn, $sql)) {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $name = $_POST['name'];
@@ -48,9 +46,7 @@ $description = htmlentities($_POST['description'], ENT_QUOTES, "UTF-8");
 
 $sql = "UPDATE profiles SET name = '$name' , firm = '$firm' , function = '$function' , street = '$street' , number = '$number' , postalcode = '$postalcode' , city = '$city' , telephone = '$telephone' , mobile = '$mobile' , email = '$email' , web = '$web' , summary = '$summary' , description = '$description' WHERE uid = $idu";
 
-if (mysqli_query($conn, $sql)) {
-    //echo "Update successful";
-} else {
+if (!mysqli_query($conn, $sql)) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
